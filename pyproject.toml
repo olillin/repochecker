@@ -13,15 +13,19 @@ classifiers = [
     'Programming Language :: Python :: 3',
 ]
 
-dependencies = ['colorama']
+requires-python = ">=3.13"
+dependencies = [
+    "colorama>=0.4.6",
+]
 
 [project.urls]
 "Bug Reports" = "https://github.com/olillin/repochecker/issues"
 "Source" = "https://github.com/olillin/repochecker"
 
-[build-system]
-requires = ['setuptools']
-build-backend = 'setuptools.build_meta'
-
 [project.scripts]
-repochecker = 'repochecker:main'
+repochecker = 'gitrepochecker:main'
+
+[build-system]
+requires = ['uv_build>=0.9.0,<0.10.0']
+build-backend = 'uv_build'
+

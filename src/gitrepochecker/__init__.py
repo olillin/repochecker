@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse
 import colorama
 
-import repochecker.git_info as git_info
+from .git_info import is_repository, get_info, DirectoryInfo
 
 def color_bool(b: bool) -> str:
     if b:
@@ -65,12 +65,12 @@ def main():
 
     for dir in directories:
         # Get directory info
-        is_git_repo = git_info.is_repository(dir)
+        is_git_repo = is_repository(dir)
 
-        info: git_info.DirectoryInfo|None = None
+        info: DirectoryInfo|None = None
         if is_git_repo:
             try:
-                info = git_info.get_info(dir)
+                info = get_info(dir)
             except Exception as e:
                 print(colorama.Fore.RED + str(e) + colorama.Fore.RESET)
                 continue

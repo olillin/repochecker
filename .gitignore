@@ -1,3 +1,11 @@
 __pycache__/
 *.egg-info/
 dist/
+
+# Build
+.venv/
+result
+
+# Direnv
+.direnv/
+.envrc
