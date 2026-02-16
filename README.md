@@ -1,11 +1,11 @@
-# RepoChecker
+# Git Repo Checker
 
-Command line tool to summarize information git repositories in a directory
+CLI to get status of git repositories.
 
 ## Usage
 
 ```console
-usage: RepoChecker [-h] [-i | -a] [-s | -r] [-d RECURSION_DEPTH] [-b] directory
+usage: repochecker [-h] [-i | -a] [-s | -r] [-d RECURSION_DEPTH] [-b] directory
 
 Check git repository information and get a summary
 

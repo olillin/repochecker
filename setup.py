@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='repochecker',
-    description='Command line tool to check all git repositories in a directory',
+    description='CLI to check status of git repositories',
     author='Oli',
     author_email='oli@olillin.com',
     license='MIT',

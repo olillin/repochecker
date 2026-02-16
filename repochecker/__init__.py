@@ -22,7 +22,7 @@ def format_branch(branch: str, upstream: str|None, behind: int, ahead: int):
 def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(
-        prog='RepoChecker',
+        prog='repochecker',
         description='Check git repository information of multiple directories and get a summary of what types of changes have not been pushed to upstream',
     )
     parser.add_argument('directory', type=Path)
