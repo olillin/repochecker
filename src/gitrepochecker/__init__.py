@@ -63,6 +63,7 @@ def main():
         return
 
 
+    force_print: bool = args.all or args.single
     for dir in directories:
         # Get directory info
         is_git_repo = is_repository(dir)
@@ -75,9 +76,9 @@ def main():
                 print(colorama.Fore.RED + str(e) + colorama.Fore.RESET)
                 continue
 
-            if not args.all and (not info.has_issues() ^ args.invert):
+            if not force_print and (not info.has_issues() ^ args.invert):
                 continue
-        elif not args.all and args.invert:
+        elif not force_print and args.invert:
             continue
 
         # Print directory info
