@@ -1,7 +1,7 @@
 [project]
 name = 'gitrepochecker'
-version = '0.2.3'
-description = 'Command line tool to check all git repositories in a directory'
+version = '0.3.0'
+description = 'CLI to check status of git repositories'
 readme = 'README.md'
 license = { file = 'LICENSE' }
 authors = [{ name = 'Oli', email = 'oli@olillin.com' }]
@@ -13,15 +13,19 @@ classifiers = [
     'Programming Language :: Python :: 3',
 ]
 
-dependencies = ['colorama']
+requires-python = ">=3.13"
+dependencies = [
+    "colorama>=0.4.6",
+]
 
 [project.urls]
-"Bug Reports" = "https://github.com/olillin/RepoChecker/issues"
-"Source" = "https://github.com/olillin/RepoChecker"
-
-[build-system]
-requires = ['setuptools']
-build-backend = 'setuptools.build_meta'
+"Bug Reports" = "https://github.com/olillin/repochecker/issues"
+"Source" = "https://github.com/olillin/repochecker"
 
 [project.scripts]
-repochecker = 'repochecker:main'
+repochecker = 'gitrepochecker:main'
+
+[build-system]
+requires = ['uv_build>=0.9.0,<0.10.0']
+build-backend = 'uv_build'
+
