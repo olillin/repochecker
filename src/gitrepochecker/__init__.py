@@ -25,7 +25,7 @@ def main():
         prog='repochecker',
         description='Check git repository information of multiple directories and get a summary of what types of changes have not been pushed to upstream',
     )
-    parser.add_argument('directory', type=Path)
+    parser.add_argument('directory', type=Path, nargs='?', default='.')
     select_group = parser.add_mutually_exclusive_group()
     select_group.add_argument('-i', '--invert', action='store_true', help='print all unchanged repositories')
     select_group.add_argument('-a', '--all', action='store_true', help='print all directories')
